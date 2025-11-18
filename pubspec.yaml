@@ -1,0 +1,56 @@
+name: recipes_test_task
+description: "Test task"
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # ---------- State Management ----------
+  flutter_riverpod: 2.6.1          # App state management
+  riverpod_annotation: 2.6.1       # Annotations for generating Notifiers and Repositories
+
+  # ---------- HTTP / API ----------
+  dio: ^5.9.0                       # HTTP client with timeouts and interceptors
+  retrofit: 4.7.2                   # API client generation on top of Dio
+  json_serializable: ^6.6.0         # Generate models from JSON
+
+  # ---------- Caching / Storage ----------
+  sqflite: ^2.2.0                   # Local relational database for offline storage
+  shared_preferences: ^2.1.1        # Store simple data, e.g., app theme
+
+  # ---------- UI / UX ----------
+  cached_network_image: ^3.2.3      # Image caching with placeholders and error widget
+  custom_refresh_indicator: ^4.0.1  # Pull-to-refresh / custom refresh indicators
+  shimmer: ^3.0.0                   # Placeholders while images are loading
+
+  # ---------- Navigation ----------
+  go_router: ^7.0.0                 # Navigation and deep links (/recipe/{id})
+
+  # ---------- Functional / Error Handling ----------
+  fpdart: ^0.6.0                     # TaskEither / Either for functional error handling
+
+  # ---------- Misc ----------
+  logger: ^1.2.1                     # Logging for Dio and other errors
+  intl: ^0.18.0                      # Date/time formatting, localization
+  pretty_dio_logger: ^1.4.0          # Logger for Dio
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0              # Linter and coding style rules
+
+  # ---------- Code Generation ----------
+  build_runner: ^2.4.5               # Code generation
+  retrofit_generator: 9.1.9         # Retrofit API client generator
+  json_annotation: ^4.9.0            # Annotations for json_serializable
+  riverpod_generator: ^2.6.4         # Generator for Notifiers and Repositories
