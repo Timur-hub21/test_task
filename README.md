@@ -9,6 +9,14 @@
 - **Flutter:** 3.32.0 (stable)  
 - **Dart:** 3.8.0 (stable)  
 
+
+---
+
+## Code generation
+### Build runner:
+1. **Run build runner:**  
+   Run `flutter packages pub run build_runner build --delete-conflicting-outputs` to generate code and automatically delete any conflicting outputs.
+
 ---
 
 ## Android builds

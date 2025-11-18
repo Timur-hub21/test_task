@@ -14,10 +14,6 @@ void main() {
         logger.e("FlutterError caught", details.exception, details.stack);
       };
 
-      logger.i("INFO log before app starts");
-      logger.w("WARNING log before app starts");
-      logger.e("ERROR log before app starts", Exception("Test exception"));
-
       runApp(const ProviderScope(child: Application()));
     },
     (error, stackTrace) {

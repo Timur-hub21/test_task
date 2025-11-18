@@ -1,5 +1,8 @@
 import 'package:recipes_test_task/core/utils/logger.dart';
+import 'package:recipes_test_task/data/local/settings_local_data_source.dart';
 import 'package:recipes_test_task/data/remote/interceptors/dio_retry_interceptor.dart';
+import 'package:recipes_test_task/data/repository/settings_repository.dart';
+import 'package:recipes_test_task/domain/repository/settings_repository_impl.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:dio/dio.dart';
@@ -50,4 +53,16 @@ Dio dio(Ref ref) {
   );
 
   return dio;
+}
+
+@riverpod
+SettingsLocalDataSource settingsLocalDataSource(Ref ref) {
+  ref.keepAlive();
+  return SettingsLocalDataSource();
+}
+
+@riverpod
+SettingsRepository settingsRepository(Ref ref) {
+  final SettingsLocalDataSource settingsLocalDataSource = ref.watch(settingsLocalDataSourceProvider);
+  return SettingsRepositoryImpl(settingsLocalDataSource);
 }
