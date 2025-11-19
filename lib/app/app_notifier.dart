@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:recipes_test_task/app/app_state.dart';
 import 'package:recipes_test_task/app/di/di.dart';
 import 'package:recipes_test_task/core/themes/theme_type.dart';
@@ -28,7 +26,6 @@ class AppNotifier extends _$AppNotifier {
   Future<void> applyCurrentTheme() async {
     await _settingsLocalDataSource.init();
     state = state.copyWith(themeType: _settingsRepository.getTheme());
-    log(state.themeType.toString());
   }
 
   Future<void> setTheme(ThemeType theme) async {

@@ -37,7 +37,7 @@ class AppTheme {
       elevation: 0,
     ),
     colorScheme: ColorScheme.dark(
-      primary: AppColors.primary,
+      primary: const Color.fromARGB(0, 186, 146, 255),
       secondary: AppColors.secondary,
       surface: AppColors.darkSurface,
       error: AppColors.error,

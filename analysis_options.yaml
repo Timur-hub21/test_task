@@ -4,3 +4,6 @@ linter:
   rules:
 formatter:
   trailing_commas: preserve
+analyzer:
+  errors:
+    unused_element_parameter: ignore

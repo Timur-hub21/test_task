@@ -29,7 +29,7 @@ class _ApplicationState extends ConsumerState<Application> with WidgetsBindingOb
 
   @override
   void didChangePlatformBrightness() {
-    final themeType = ref.read(appNotifierProvider).themeType;
+    final ThemeType? themeType = ref.read(appNotifierProvider).themeType;
 
     if (themeType == ThemeType.device) {
       ref.read(appNotifierProvider.notifier).applyCurrentTheme();

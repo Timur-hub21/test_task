@@ -42,6 +42,8 @@ dependencies:
   logger: ^1.2.1                     # Logging for Dio and other errors
   intl: ^0.18.0                      # Date/time formatting, localization
   pretty_dio_logger: ^1.4.0          # Logger for Dio
+  freezed_annotation: ^3.1.0
+  path: ^1.9.1
 
 dev_dependencies:
   flutter_test:
